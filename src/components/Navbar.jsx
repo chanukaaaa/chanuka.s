@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/Navbar.css';
+import logo from '../assets/logo1.png';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,14 +26,18 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        {/* <img src={logo} alt="Logo" className="navbar-logo" /> */}
-        <div className="navbar-menu">
-          <Link to="/projects">PROJECTS</Link>
-          <Link to="/contact">CONTACT</Link>
-          <Link to="/blog">BLOG</Link>
-          <Link to="/resume">RESUME</Link>
+        <div className="navbar-left">
+          <img src={logo} alt="Logo" className="navbar-logo" />
         </div>
-        <div className="navbar-actions">
+        <div className="navbar-center">
+          <div className="navbar-menu">
+            <Link to="/projects">PROJECTS</Link>
+            <Link to="/contact">CONTACT</Link>
+            <Link to="/blog">BLOG</Link>
+            <Link to="/resume">RESUME</Link>
+          </div>
+        </div>
+        <div className="navbar-right">
           <label className="switch">
             <span className="sun">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -50,19 +55,8 @@ const Navbar = () => {
             <input type="checkbox" className="input" onChange={toggleTheme} />
             <span className="slider"></span>
           </label>
-          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-            ☰
-          </button>
         </div>
       </div>
-      {isMobileMenuOpen && (
-        <div className="mobile-menu">
-          <Link to="/projects">PROJECTS</Link>
-          <Link to="/contact">CONTACT</Link>
-          <Link to="/blog">BLOG</Link>
-          <Link to="/resume">RESUME</Link>
-        </div>
-      )}
     </nav>
   );
 };

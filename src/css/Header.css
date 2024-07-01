@@ -1,5 +1,6 @@
-/* src/components/Header.css */
+
 .header {
+  margin-top: -50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,17 +32,44 @@
     margin-bottom: 2rem;
   }
   
-  .header button {
-    padding: 0.5rem 1.5rem;
-    font-size: 1.25rem;
-    color: white;
-    background-color: #007bff;
+  .button {
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: #3d3a4e;
+    background-size: 400%;
+    color: #fff;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
   }
   
-  .header button:hover {
-    background-color: #0056b3;
+  .button:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .button-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+      82.3deg,
+      rgb(14, 2, 32) 10.8%,
+      rgb(5, 1, 54) 94.3%
+    );
+    transition: all 0.475s;
   }
   

@@ -1,6 +1,5 @@
-// src/components/Projects.jsx
 import React from 'react';
-import '../css/Projects.css';  // Import the CSS file
+import '../css/Projects.css'; 
 
 const projects = [
   { title: 'Project 1', description: 'Description of Project 1' },
