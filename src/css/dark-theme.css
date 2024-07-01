@@ -1,0 +1,28 @@
+/* src/styles/dark-theme.css */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  body.dark-theme .navbar {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+  }
+  
+  body.dark-theme .header {
+    background-color: #1e1e1e;
+  }
+  
+  body.dark-theme .projects {
+    background-color: #1e1e1e;
+  }
+  
+  body.dark-theme .project-card {
+    background-color: #2e2e2e;
+    border: 1px solid #444;
+  }
+  
+  body.dark-theme .footer {
+    background-color: #1e1e1e;
+  }
+  
