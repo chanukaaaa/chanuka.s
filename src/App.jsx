@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import './App.css';
+import Blog from './components/Blog';
 
 const App = () => {
   return (
@@ -12,7 +13,8 @@ const App = () => {
       <div className="App">
         <Navbar />
         <Header />
-        <Projects />
+        <Projects /> 
+        <Blog />
         <Footer />
       </div>
     </Router>
