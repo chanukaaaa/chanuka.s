@@ -13,8 +13,8 @@ const Header = () => {
         A passionate Frontend Developer with experience in web design and
         development.
       </p>
-      <button class="button">
-        <span class="button-content">Contact Me</span>
+      <button className="button">
+        <span className="button-content">Contact Me</span>
       </button>
     </header>
   );

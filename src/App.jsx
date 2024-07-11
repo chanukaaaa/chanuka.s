@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Footer from './components/Footer';
 import './App.css';
 import Blog from './components/Blog';
+import BackToTopButton from './components/BackToTopButton';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Header />
         <Projects /> 
         <Blog />
+        <BackToTopButton />
         <Footer />
       </div>
     </Router>
