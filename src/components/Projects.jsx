@@ -19,6 +19,9 @@ const projects = [
 
 const Projects = () => {
   return (
+    <div>
+      <h1>Journey Through My Work</h1>
+      <p>A collection of my software projects and innovations.</p>
     <section className="projects">
       {projects.map((project) => (
         <div key={project.id} className="project-card">
@@ -36,6 +39,7 @@ const Projects = () => {
         </div>
       ))}
     </section>
+    </div>
   );
 };
 

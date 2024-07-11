@@ -78,11 +78,13 @@
 @media (max-width: 992px) {
   .projects {
     grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 40px; /* Adjust padding for smaller screens */
   }
 }
 
 @media (max-width: 768px) {
   .projects {
     grid-template-columns: repeat(1, 1fr);
+    padding: 2rem 20px; /* Further reduce padding for mobile */
   }
 }
