@@ -1,75 +1,73 @@
-
 .header {
   margin-top: 00px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-    background-color: #f0f0f0;
-  }
-  
-  .header img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-bottom: 1rem;
-  }
-  
-  .header h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .header h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .header p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  .button {
-    margin-top: 50px;
-    position: relative;
-    overflow: hidden;
-    height: 3rem;
-    padding: 0 2rem;
-    border-radius: 1.5rem;
-    background: #3d3a4e;
-    background-size: 400%;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .button:hover::before {
-    transform: scaleX(1);
-  }
-  
-  .button-content {
-    position: relative;
-    z-index: 1;
-  }
-  
-  .button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: 0 50%;
-    width: 100%;
-    height: inherit;
-    border-radius: inherit;
-    background: linear-gradient(
-      82.3deg,
-      rgb(0, 0, 0) 10.8%,
-      rgb(10, 3, 80) 94.3%
-    );
-    transition: all 0.475s;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.header img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1rem;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.header h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.header p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  margin-top: 50px;
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #3d3a4e;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgb(0, 0, 0) 10.8%,
+    rgb(10, 3, 80) 94.3%
+  );
+  transition: all 0.475s;
+}
