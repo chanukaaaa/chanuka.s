@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll'; // Import Link from react-scroll
 import '../css/Navbar.css';
 import logo from '../assets/logo1.png';
 
@@ -31,10 +31,10 @@ const Navbar = () => {
         </div>
         <div className="navbar-center">
           <div className="navbar-menu">
-            <Link to="/projects">PROJECTS</Link>
-            <Link to="/contact">CONTACT</Link>
-            <Link to="/blog">BLOG</Link>
-            <Link to="/resume">RESUME</Link>
+            <Link to="projects-section" smooth={true} duration={500}>PROJECTS</Link>
+            <Link to="blog-section" smooth={true} duration={500}>BLOG</Link>
+            <Link to="contact-section" smooth={true} duration={500}>CONTACT</Link>
+            <Link to="resume-section" smooth={true} duration={500}>RESUME</Link>
           </div>
         </div>
         <div className="navbar-right">

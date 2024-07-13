@@ -19,26 +19,26 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div>
-      <h1>Journey Through My Work</h1>
-      <p>A collection of my software projects and innovations.</p>
-    <section className="projects">
-      {projects.map((project) => (
-        <div key={project.id} className="project-card">
-          <div className="project-image">
-            <img src={project.image} alt={project.title} />
-            <div className="project-buttons">
-              <a href={project.githubLink} target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href={project.websiteLink} target="_blank" rel="noopener noreferrer">Website</a>
+    <div className="projects-container">
+        <h1>Journey Through My Work</h1>
+        <p>A collection of my software projects and innovations.</p>
+      <section className="projects">
+        {projects.map((project) => (
+          <div key={project.id} className="project-card">
+            <div className="project-image">
+              <img src={project.image} alt={project.title} />
+              <div className="project-buttons">
+                <a href={project.githubLink} target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href={project.websiteLink} target="_blank" rel="noopener noreferrer">Website</a>
+              </div>
+            </div>
+            <div className="project-details">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
             </div>
           </div>
-          <div className="project-details">
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-          </div>
-        </div>
-      ))}
-    </section>
+        ))}
+      </section>
     </div>
   );
 };

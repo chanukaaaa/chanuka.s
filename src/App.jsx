@@ -1,23 +1,35 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
-import './App.css';
 import Blog from './components/Blog';
+import Contact from './components/Contact';
 import BackToTopButton from './components/BackToTopButton';
+import './App.css';
 
 const App = () => {
   return (
     <Router>
       <div className="App">
         <Navbar />
-        <Header />
-        <Projects /> 
-        <Blog />
+        <section id="header-section">
+          <Header />
+        </section>
+        <section id="projects-section">
+          <Projects />
+        </section>
+        <section id="blog-section">
+          <Blog />
+        </section>
+        <section id="contact-section">
+          <Contact />
+        </section>
+        <section id="footer-section">
+          <Footer />
+        </section>
         <BackToTopButton />
-        <Footer />
       </div>
     </Router>
   );

@@ -1,9 +1,36 @@
+/* Apply background color to the entire page */
+body, html {
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.projects-container {
+  text-align: center;
+}
+
+.projects-container h1 {
+  font-size: 3rem;
+  color: #333333;
+  background-color: #f0f0f0; /* Adjust the background color as needed */
+  border-radius: 10px;
+}
+
+.projects-container p {
+  font-size: 1.5rem;
+  color: #666666;
+  background-color: #f0f0f0; /* Adjust the background color as needed */
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+
 .projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   padding: 2rem 140px; /* 2rem top/bottom, 140px left/right */
-  background-color: #f0f0f0;
 }
 
 .project-card {

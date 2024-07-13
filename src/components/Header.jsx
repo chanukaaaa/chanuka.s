@@ -7,8 +7,7 @@ const Header = () => {
     <header className="header">
       {<img src={profileImage} alt="Profile" className="header-image" />}
       <h1>Hi, I'm Chanuka</h1>
-      <h2>IT Undergraduate</h2>
-      <p>Coding the possibilities, crafting the future.</p>
+      <h2>Coding the possibilities, crafting the future.</h2>
       <p className="description">
         A passionate Frontend Developer with experience in web design and
         development.
