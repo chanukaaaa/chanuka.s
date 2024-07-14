@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import "../css/Contact.css";
+import contactImage from '../assets/contact_image.svg';
 
 const Contact = () => {
   const {
@@ -52,64 +53,76 @@ const Contact = () => {
 
   return (
     <div className="contact-page">
-      <div className="contact-section">
-        <h2>Say Hello</h2>
-        <p>I value your feedback. Feel free to contact me. Drop a message and I'll get back to you as soon as possible.</p>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="input-group">
-            <label className="label">Name</label>
-            <input
-              autoComplete="off"
-              name="name"
-              id="name"
-              className="input"
-              type="text"
-              {...register("name", { required: true })}
-            />
-            {errors.name && (
-              <span className="error">This field is required</span>
-            )}
-          </div>
-          <div className="input-group">
-            <label className="label">Email</label>
-            <input
-              autoComplete="off"
-              name="email"
-              id="email"
-              className="input"
-              type="email"
-              {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
-            />
-            {errors.email && (
-              <span className="error">Invalid email address</span>
-            )}
-          </div>
-          <div className="input-group">
-            <label className="label">Message</label>
-            <textarea
-              autoComplete="off"
-              name="message"
-              id="message"
-              className="input textarea"
-              {...register("message", { required: true })}
-            ></textarea>
-            {errors.message && (
-              <span className="error">This field is required</span>
-            )}
-          </div>
-          <button className="button2" type="submit">
-            Send
-          </button>
-        </form>
-        <iframe name="hidden_iframe" style={{ display: "none" }}></iframe>
-        {formStatus === "success" && (
-          <p className="success-message">Your message has been sent!</p>
-        )}
-        {formStatus === "error" && (
-          <p className="error-message">
-            Something went wrong, please try again.
+      <h2>Say Hello</h2>
+          <p>
+            I value your feedback. Feel free to contact me. Drop a message and
+            I'll get back to you as soon as possible.
           </p>
-        )}
+      <div className="contact-section">
+        
+        <div className="contact-form-container">
+          
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="input-group">
+              <label className="label" htmlFor="name">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                {...register("name", { required: "Name is required" })}
+                className={`input ${errors.name ? "error" : ""}`}
+              />
+              {errors.name && <p className="error">{errors.name.message}</p>}
+            </div>
+
+            <div className="input-group">
+              <label className="label" htmlFor="email">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                {...register("email", {
+                  required: "Email is required",
+                  pattern: {
+                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                    message: "Invalid email address",
+                  },
+                })}
+                className={`input ${errors.email ? "error" : ""}`}
+              />
+              {errors.email && <p className="error">{errors.email.message}</p>}
+            </div>
+
+            <div className="input-group">
+              <label className="label" htmlFor="message">
+                Message
+              </label>
+              <textarea
+                id="message"
+                {...register("message", { required: "Message is required" })}
+                className={`input ${errors.message ? "error" : ""}`}
+              ></textarea>
+              {errors.message && (
+                <p className="error">{errors.message.message}</p>
+              )}
+            </div>
+
+            <button type="submit" className="button2">
+              Send
+            </button>
+            {formStatus === "success" && (
+              <p className="success-message">Message sent successfully!</p>
+            )}
+            {formStatus === "error" && (
+              <p className="error-message">Failed to send message. Try again.</p>
+            )}
+          </form>
+        </div>
+        <div className="contact-image-container">
+          <img src={contactImage} alt="Contact" className="contact-image" />
+        </div>
       </div>
     </div>
   );

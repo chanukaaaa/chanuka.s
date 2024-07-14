@@ -1,31 +1,55 @@
-.contact-section {
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem;
   background-color: #f0f0f0;
   border-radius: 10px;
-  max-width: 800px; /* Increased max-width for better fit */
+  max-width: 1000px;
   margin: 0 auto;
-  margin-top: 50px; /* Added margin-top to center vertically */
+  margin-top: 50px;
 }
 
-.contact-section h2 {
+.contact-page h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
 
-.contact-section form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact-section p {
+.contact-page p {
   text-align: center;
   font-size: 1rem;
   margin-top: 1rem;
-  color: #555; /* Adjust the color as needed */
+  color: #555;
+  max-width: 600px; /* Optional: To limit the width of the paragraph */
 }
 
+.contact-section {
+  display: flex;
+  justify-content: space-between; /* Add space between the elements */
+  align-items: center;
+  width: 100%;
+  gap: 2rem; /* Add gap between the left and right parts */
+}
+
+.contact-form-container {
+  flex: 1;
+  padding-right: 1rem; /* Add padding to the right to create a gap */
+}
+
+.contact-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem; /* Add padding to the left to create a gap */
+}
+
+.contact-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
 
 .input-group {
   display: flex;
@@ -34,35 +58,40 @@
 
 .label {
   display: block;
-  margin-bottom: .3rem;
-  font-size: .9rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
   font-weight: bold;
   color: #05060f99;
-  transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+  transition: color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
 }
 
 .input {
   max-width: 100%;
   height: 44px;
   background-color: #05060f0a;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   padding: 0 1rem;
   border: 2px solid transparent;
   font-size: 1rem;
-  transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s, background .2s cubic-bezier(.25,.01,.25,1) 0s;
+  transition: border-color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s,
+    color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s,
+    background 0.2s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
 }
 
 .input-group textarea {
-  height: 200px; /* Increase the height as needed */
-  padding: 1rem; /* Adjust padding for better text area styling */
+  height: 200px;
+  padding: 1rem;
 }
 
-.input:hover, .input:focus, .input-group:hover .input {
+.input:hover,
+.input:focus,
+.input-group:hover .input {
   outline: none;
   border-color: #05060f;
 }
 
-.input-group:hover .label, .input:focus {
+.input-group:hover .label,
+.input:focus {
   color: #05060fc2;
 }
 
@@ -74,8 +103,8 @@
 .button2 {
   width: 7rem;
   height: 3rem;
-  display: block; /* Changed to block to center */
-  margin: 0 auto; /* Centers the button horizontally */
+  display: block;
+  margin: 20px auto;
   transition: all 0.2s ease-in;
   position: relative;
   overflow: hidden;
@@ -83,7 +112,7 @@
   color: #ffffff;
   cursor: pointer;
   font-size: 18px;
-  border-radius: 30px; /* Rounded border radius */
+  border-radius: 30px;
   background: #3d3a4e;
   border: 1px solid #3d3a4e;
   box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
@@ -170,13 +199,24 @@
 @media (max-width: 600px) {
   .contact-section {
     padding: 1rem;
+    flex-direction: column;
   }
 
-  .contact-section h2 {
+  .contact-page h2 {
     font-size: 1.5rem;
   }
 
-  button {
+  .button2 {
     font-size: 0.875rem;
+  }
+
+  .contact-form-container,
+  .contact-image-container {
+    width: 100%;
+  }
+
+  .contact-image {
+    width: 100%;
+    height: auto;
   }
 }
