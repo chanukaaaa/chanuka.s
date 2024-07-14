@@ -60,7 +60,7 @@ const skills = [
 const Skills = () => {
   return (
     <div className="skills-container">
-      <h1>Skills</h1>
+      <h1>Developer Toolkit</h1>
       <div className="skills-grid">
         {skills.map((skill) => (
           <div key={skill.id} className="skill-card">

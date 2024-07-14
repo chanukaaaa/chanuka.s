@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll'; // Import Link from react-scroll
 import '../css/Navbar.css';
 import logo from '../assets/logo1.png';
+import logo2 from '../assets/cropped_image.png'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,7 +28,7 @@ const Navbar = () => {
     <nav className="">
       <div className="navbar-container">
         <div className="navbar-left">
-          <img src={logo} alt="Logo" className="navbar-logo" />
+          <img src={logo2} alt="Logo" className="navbar-logo" />
         </div>
         <div className="navbar-center">
           <div className="navbar-menu">
