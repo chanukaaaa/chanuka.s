@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
+import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import Blog from './components/Blog';
@@ -17,12 +18,15 @@ const App = () => {
         <section id="header-section">
           <Header />
         </section>
+        <section id="skills-section">
+          <Skills />
+        </section>
         <section id="projects-section">
           <Projects />
         </section>
-        <section id="blog-section">
+        {/* <section id="blog-section">
           <Blog />
-        </section>
+        </section> */}
         <section id="contact-section">
           <Contact />
         </section>

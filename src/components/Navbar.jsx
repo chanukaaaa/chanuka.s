@@ -31,8 +31,9 @@ const Navbar = () => {
         </div>
         <div className="navbar-center">
           <div className="navbar-menu">
+          <Link to="skills-section" smooth={true} duration={500}>SKILLS</Link>
             <Link to="projects-section" smooth={true} duration={500}>PROJECTS</Link>
-            <Link to="blog-section" smooth={true} duration={500}>BLOG</Link>
+            {/* <Link to="blog-section" smooth={true} duration={500}>BLOG</Link> */}
             <Link to="contact-section" smooth={true} duration={500}>CONTACT</Link>
             <Link to="resume-section" smooth={true} duration={500}>RESUME</Link>
           </div>
